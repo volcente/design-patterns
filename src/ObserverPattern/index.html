@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Patterns - Observer Pattern</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Observer Pattern</h1>
+
+      <button id="notify-button" type="button">Present random pokemon</button>
+
+      <article id="pokemon-showcase">
+        <header>
+          <h2 id="pokemon-name"></h2>
+        </header>
+
+        <section>
+          <p id="pokemon-category"></p>
+          <p id="pokemon-weight"></p>
+        </section>
+
+        <footer>
+          <ul id="pokemon-abilities"></ul>
+        </footer>
+      </article>
+    </div>
+
+    <script
+      type="module"
+      src="/src/ObserverPattern/ObserverExample.ts"
+    ></script>
+  </body>
+</html>
