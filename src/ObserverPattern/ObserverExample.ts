@@ -1,5 +1,8 @@
 import { Pokedex, type PokedexSubscriber } from "./Pokedex";
+import { toast, Toaster } from "./Toaster";
 import { pokemons } from "./pokedex.data";
+
+Toaster();
 
 const PokemonWatcher: PokedexSubscriber = (data) => {
   const pokemonName = document.querySelector("#pokemon-name");
@@ -53,4 +56,10 @@ presentButton?.addEventListener("click", () => {
   const pokemonIndex = Math.floor(Math.random() * (pokemons.length - 1));
   const pokemon = pokemons[pokemonIndex];
   Pokedex.present(pokemon);
+  toast({ content: `${pokemon.name} has entered an arena!`, id: pokemon.name });
+});
+
+const otherButton = document.querySelector<HTMLButtonElement>("#other-button");
+otherButton?.addEventListener("click", () => {
+  toast("DUPA!");
 });
